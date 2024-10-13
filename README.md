@@ -5,7 +5,7 @@ This program simulates a data stream that generates time series data with anomal
 
 ## Exponentially Weighted Moving Average (EWMA) Algorithm
 
-The Exponentially Weighted Moving Average (EWMA) is a statistical method that smooths time series data by applying exponentially decreasing weights to past observations. This allows more recent data to have a greater impact on the average.
+The Exponentially Weighted Moving Average (EWMA) is a statistical method that smooths time series data by applying exponentially decreasing weights to past observations. This allows more recent data to have a greater impact on the average. Anomalies are flagged when the deviation of a new data point from this average exceeds a specified threshold, indicating that the data point significantly deviates from normal behavior.
 
 ### Formula
 
