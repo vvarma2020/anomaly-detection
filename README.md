@@ -10,6 +10,7 @@ The Exponentially Weighted Moving Average (EWMA) is a statistical method that sm
 
 ### Formula
 
+```math
 \[
 EWMA_t = \alpha \cdot X_t + (1 - \alpha) \cdot EWMA_{t-1}
 \]
@@ -19,7 +20,7 @@ Where:
 - \( X_t \) is the observation at time \( t \).
 - \( EWMA_{t-1} \) is the EWMA at the previous time step.
 - \( \alpha \) is the weighting factor (0 < \( \alpha \) < 1).
-
+```
 
 ## Key Components
 
