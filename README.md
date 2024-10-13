@@ -3,7 +3,6 @@
 ## Overview
 This program simulates a data stream that generates time series data with anomalies and concept drift, then visualizes the data in real-time while detecting anomalies using an Exponentially Weighted Moving Average (EWMA) technique. The goal is to detect abnormal patterns in the data and differentiate between normal variations and true anomalies.
 
-
 ## Exponentially Weighted Moving Average (EWMA) Algorithm
 
 The Exponentially Weighted Moving Average (EWMA) is a statistical method that smooths time series data by applying exponentially decreasing weights to past observations. This allows more recent data to have a greater impact on the average.
@@ -11,17 +10,8 @@ The Exponentially Weighted Moving Average (EWMA) is a statistical method that sm
 ### Formula
 
 ```math
-\[
 EWMA_t = \alpha \cdot X_t + (1 - \alpha) \cdot EWMA_{t-1}
-\]
-
-Where:
-- \( EWMA_t \) is the EWMA at time \( t \).
-- \( X_t \) is the observation at time \( t \).
-- \( EWMA_{t-1} \) is the EWMA at the previous time step.
-- \( \alpha \) is the weighting factor (0 < \( \alpha \) < 1).
 ```
-
 ## Key Components
 
 ### 1. **Simulation Class**:
