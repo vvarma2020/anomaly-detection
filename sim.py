@@ -120,6 +120,13 @@ class EWMAAnimation:
 
         # Initialize the plot
         self.fig, self.ax = plt.subplots(figsize=(15, 5))
+
+        # Set up the plot labels and title
+        self.ax.set_xlabel("Time")
+        self.ax.set_ylabel("Value")
+        self.ax.set_title("EWMA Anomaly Detection")
+
+        # Set up the plot elements
         (self.line,) = self.ax.plot([], [], label="Data")
         self.predicted_anomaly_scatter = self.ax.scatter(
             [], [], color="blue", label="Predicted Anomalies"
