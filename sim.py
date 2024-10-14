@@ -8,7 +8,6 @@ from typing import Tuple
 # Set up logging configuration
 logging.basicConfig(level=logging.WARNING)
 
-
 class Simulation:
     """
     A datastream generator that simulates a datastream with random anomalies and concept drift.
@@ -47,13 +46,6 @@ class Simulation:
         )
         noise = np.random.normal(0, 1)
         value = regular_pattern + seasonal_pattern + noise
-
-        # Log a warning if the value is out of bounds
-        if not (-50 <= value <= 50):
-            logging.warning(
-                f"Generated value {value} out of bounds at t={self.t}. Using default value 0."
-            )
-            value = 0
 
         # Check for anomaly
         is_anomaly = False
@@ -205,7 +197,7 @@ class EWMAAnimation:
 
 
 if __name__ == "__main__":
-    ewma_animation = EWMAAnimation()
+    ewma_animation = EWMAAnimation(max_data_points=500, interval=250)
 
     # Run the animation
     try:
